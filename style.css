@@ -1,0 +1,241 @@
+/* Reseta margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo global do corpo */
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #000007, #1f1f1f); /* Degradê de fundo que cobre a página toda */
+    min-height: 100vh; /* Garante que o corpo da página tenha pelo menos a altura da janela de visualização */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lobster', cursive; /* Certifique-se de que a fonte Lobster está sendo importada */
+  }
+  
+  /* Estilo dos links */
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  /* Estilo do logo */
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  /* Estilo do menu de navegação */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1515ff;
+    height: 8vh;
+  }
+  
+  /* Estilo do menu móvel */
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  /* Estilo da imagem principal */
+  .main-image {
+    max-width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
+    height: auto;    /* Mantém a proporção da imagem */
+    border: 2px solid #fff; /* Adiciona uma borda branca */
+    border-radius: 8px;     /* Adiciona bordas arredondadas */
+  }
+  
+  /* Estilo da seção hero */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content h1 {
+    color: #ffd700;
+    font-size: 2.5em;
+  }
+  
+  .hero-content p {
+    color: #dcdcdc;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .btn-main {
+    background: #1e90ff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn-main:hover {
+    background: #ff4500;
+  }
+  
+  /* Estilo das seções de produtos e personalização */
+  .produtos, .personalizacao {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .produtos h2, .personalizacao h2 {
+    color: #ffd700;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .produto-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .produto-item {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .produto-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .orcamento {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .orcamento h2 {
+    color: #ffd700;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  
+  .orcamento label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .orcamento input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .orcamento button {
+    background: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .orcamento button:hover {
+    background: #ff4500;
+  }
+  
+  .orcamento #resultado {
+    margin-top: 15px;
+    color: #ffd700;
+    font-size: 1.2em;
+  }
+  
+  /* Estilo do rodapé */
+  footer {
+    background: #23232e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Menu móvel ativo */
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  /* Estilo dos itens de produto */
+.produto-item {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .produto-item .produto-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .produto-item .descricao {
+    color: #dcdcdc; /* Altere esta cor para a cor desejada para a descrição dos produtos */
+    font-size: 1em; /* Ajuste o tamanho da fonte conforme necessário */
+    line-height: 1.6; /* Melhora a legibilidade */
+    margin-bottom: 15px; /* Espaçamento abaixo da descrição */
+  }

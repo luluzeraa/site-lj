@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LJ Tapetes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="/">LJ Tapetes</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Personalização</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=5562981019022">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="LJ.png" alt="Descrição da Imagem" class="main-image" />
+      <div class="hero-content">
+        <h1>Bem-vindo à LJ Tapetes</h1>
+        <p>Transforme seu espaço com nossos tapetes personalizados. Explore nossas opções e calcule seu orçamento.</p>
+        <a href="#orcamento" class="btn-main">Calcule seu Orçamento</a>
+      </div>
+    </section>
+
+    <section id="produtos" class="produtos">
+      <h2>Nossos Produtos</h2>
+      <div class="produto-list">
+        <!-- Exemplo de produto -->
+        <div class="produto-item">
+            <img src="elevadores.jpg" alt="Tapete Elegante" class="produto-image">
+            <h3>Tapete Elegante</h3>
+            <p class="descricao">Descrição do tapete elegante. Feito com materiais de alta qualidade.</p>
+            <p>Preço: R$ 200,00</p>
+          </div>
+          <div class="produto-item">
+            <img src="sanitizante.jpg" alt="Tapete Moderno" class="produto-image">
+            <h3>Tapete Moderno</h3>
+            <p class="descricao">Descrição do tapete moderno. Ideal para ambientes sofisticados.</p>
+            <p>Preço: R$ 150,00</p>
+          </div>
+        <!-- Adicione mais produtos conforme necessário -->
+      </div>
+    </section>
+
+    <section id="personalizacao" class="personalizacao">
+      <h2>Personalize Seu Tapete</h2>
+      <p>Escolha as cores, padrões e tamanhos para criar um tapete único que combine com seu estilo.</p>
+      <!-- Aqui você pode adicionar imagens ou uma galeria de personalização -->
+    </section>
+
+    <section id="orcamento" class="orcamento">
+      <h2>Calcule o Orçamento do Tapete</h2>
+      <form id="orcamento-form">
+        <label for="largura">Largura (em metros):</label>
+        <input type="number" id="largura" name="largura" required>
+        
+        <label for="comprimento">Comprimento (em metros):</label>
+        <input type="number" id="comprimento" name="comprimento" required>
+        
+        <button type="button" onclick="calcularOrcamento()">Calcular Orçamento</button>
+      </form>
+      <p id="resultado"></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 LJ Tapetes. Todos os direitos reservados.</p>
+    <a href="https://api.whatsapp.com/send?phone=5562981019022">Fale Conosco</a>
+  </footer>
+  <script src="mobile-navbar.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
